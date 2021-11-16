@@ -1,7 +1,5 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-
+import type { NextPage } from "next";
+import Head from "next/head";
 
 const Home: NextPage = () => {
   return (
@@ -12,19 +10,15 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <h1>
+        Welcome to <a href="https://nextjs.org">Next.js!</a>
+      </h1>
 
-        <h1>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p>
-          Get started by editing{' '}
-          <code>pages/index.tsx</code>
-        </p>
-
-       
+      <p>
+        Get started by editing <code>pages/index.tsx</code>
+      </p>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

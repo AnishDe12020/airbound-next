@@ -5,8 +5,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint": "eslint '{components,pages,utils,data,layouts}/**/*.{js,jsx,ts,tsx}'",
+    "lint:fix": "eslint --fix '{components,pages,utils,data,layouts}/**/*.{js,jsx,ts,tsx}'",
+    "format": "prettier --check \"{components,data,pages,styles,utils,layouts}/**/*.{js,jsx,ts,tsx,css,scss,json,yaml,md}\"",
+    "format:fix": "prettier --write \"{components,data,pages,styles,utils,layouts}/**/*.{js,jsx,ts,tsx,css,scss,json,yaml,md}\"",
+    "types:check": "tsc --pretty --noEmit",
+    "ci": "rm -rf node_modules && yarn install --frozen-lockfile"
   },
   "dependencies": {
     "next": "12.0.4",
@@ -19,10 +24,13 @@
     "@types/node": "16.11.7",
     "@types/react": "17.0.35",
     "autoprefixer": "^10.4.0",
-    "eslint": "7",
+    "eslint": "^8.2.0",
+    "eslint-config-google": "^0.14.0",
     "eslint-config-next": "12.0.4",
+    "eslint-config-prettier": "^8.3.0",
     "husky": "^7.0.4",
     "postcss": "^8.3.11",
+    "prettier": "^2.4.1",
     "tailwindcss": "^2.2.19",
     "typescript": "4.4.4"
   }
