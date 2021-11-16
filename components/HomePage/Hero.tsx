@@ -88,7 +88,7 @@ const Hero = (): JSX.Element => (
           );
         }
         .buildings {
-          background: url("/Home-page/hero-section/building.png");
+          background: url("/static/HomePage/Hero/building.png");
           background-repeat: repeat-x;
           background-position-y: bottom;
           background-size: 700px;
